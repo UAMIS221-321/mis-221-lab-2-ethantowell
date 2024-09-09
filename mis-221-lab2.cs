@@ -10,4 +10,4 @@ double numberOfToppings = double.Parse(Console.ReadLine());
 System.Console.WriteLine("If you would like please add tip");
 tip = double.Parse(Console.ReadLine());
 finalTotal = ((numberOfSandwiches * COST_OF_SANDWICH) + (numberOfToppings * COST_OF_TOPPING) + tip)*(1 - DISCOUNT_AMOUNT);
-System.Console.WriteLine("Your final total is "+finalTotal);
+System.Console.WriteLine("Your final total is "+"$ "+(Math.Round(finalTotal, 2)));
