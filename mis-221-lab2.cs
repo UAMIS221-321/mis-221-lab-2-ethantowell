@@ -1,26 +1,13 @@
-// varaiables
-int numberOfSandwiches = 0;
-int numberOfToppings = 0;
-double tip = 0;
-double totalSandwichCost;
-double totalToppingCost;
-double baseCost;
-//constants
 const double COST_OF_SANDWICH = 4.75;
 const double COST_OF_TOPPING = 0.55;
 const double DISCOUNT_AMOUNT = 0.10;
-// Prompt user for sandwiches
-System.Console.WriteLine("How many sandwiches do you want?");
-numberOfSandwiches = int.Parse(Console.Readline());
-System.Console.WriteLine("Sandwiches "+numberOfSandwiches);
-//Prompt user for toppings
-System.Console.WriteLine("How many toppings do you want?");
-numberOfToppings = int.Parse(Console.ReadLine());
-System.Console.WriteLine("Toppings "+numberOfToppings);
-System.Console.WriteLine("Would you like to add a tip?");
+double tip = 0;
+double finalTotal = 0;
+System.Console.WriteLine("How many sandwiches do you want to order?");
+double numberOfSandwiches = double.Parse(Console.ReadLine());
+System.Console.WriteLine("How many toppings would you like?");
+double numberOfToppings = double.Parse(Console.ReadLine());
+System.Console.WriteLine("If you would like please add tip");
 tip = double.Parse(Console.ReadLine());
-double totalSandwichCost = COST_OF_SANDWICH * numberOfSandwiches;
-double totalToppingCost = COST_OF_TOPPING * numberOfToppings;
-double baseCost = totalSandwichCost + totalToppingCost;
-orderCost = tip + baseCost * (1-DISCOUNT_AMOUNT);
-System.Console.WriteLine("Your total order is "+orderCost);
+finalTotal = ((numberOfSandwiches * COST_OF_SANDWICH) + (numberOfToppings * COST_OF_TOPPING) + tip)*(1 - DISCOUNT_AMOUNT);
+System.Console.WriteLine("Your final total is "+finalTotal);
