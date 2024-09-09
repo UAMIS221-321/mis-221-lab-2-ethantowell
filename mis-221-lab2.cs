@@ -23,4 +23,4 @@ double totalSandwichCost = COST_OF_SANDWICH * numberOfSandwiches;
 double totalToppingCost = COST_OF_TOPPING * numberOfToppings;
 double baseCost = totalSandwichCost + totalToppingCost;
 orderCost = tip + baseCost * (1-DISCOUNT_AMOUNT);
-System.Console.WriteLine(orderCost);
+System.Console.WriteLine("Your total order is "+orderCost);
